@@ -23,17 +23,20 @@ domain = "yourdomain.example"
 url = 
 headers = 
 response = 
-#And don't forget to check for errors during the call!
 
+#And don't forget to check for errors that may have occured!
 
+#Make sure the right data in the correct format is chosen, you can use print statements to debug your code
 domain_status = response.json()[domain]["status"]
 
 if domain_status == 1:
     print(f"The domain {domain} is found CLEAN")
 elif domain_status == -1:
     print(f"The domain {domain} is found MALICIOUS")
-    umbrella_malicious_domains.append(domain)
 elif domain_status == 0:
     print(f"The domain {domain} is found UNDEFINED")
 
-print("This is how the response from Umbrella Investigate looks like: \n" + pprint(response.json(), indent=4)
+print("This is how the response from Umbrella Investigate looks like: \n")
+pprint(response.json(), indent=4)
+
+#Add another call here, where you check the historical data for either the domain from the intro or your own domain and print it out in a readable format
