@@ -5,3 +5,4 @@ env.py
 pyvenv.cfg
 /.vscode/
 /__pycache__/
+security/__pycache__/

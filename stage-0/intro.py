@@ -9,7 +9,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from pprint import pprint
 
 here = Path(__file__).parent.absolute()
-repository_root = (here / "../.." ).resolve()
+repository_root = (here / ".." ).resolve()
 sys.path.insert(0, str(repository_root))
 
 import env
