@@ -4,7 +4,6 @@ import requests
 import json
 import sys
 from pathlib import Path
-import webexteamssdk
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from pprint import pprint
 
