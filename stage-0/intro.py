@@ -17,7 +17,7 @@ inv_url = env.UMBRELLA.get("inv_url")
 inv_token = env.UMBRELLA.get("inv_token")
 domain = "internetbadguys.com"
 
-url = f"{inv_host}/domains/categorization/{domain}?showLabels"
+url = f"{inv_url}/domains/categorization/{domain}?showLabels"
 headers = {"Authorization": f'Bearer {api_key}'}
 response = requests.get(url, headers=headers)
 response.raise_for_status()
